@@ -7,10 +7,10 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 const LineChartUser = ({ dataAverageSession }) => {
     console.log(dataAverageSession);
     return (
-        <div>
+        <div className='div-linechart'>
             <LineChart
-                width={300}
-                height={180}
+                width={200}
+                height={150}
                 data={dataAverageSession}
                 margin={{
                     top: 5,
@@ -24,7 +24,7 @@ const LineChartUser = ({ dataAverageSession }) => {
                 {/* <YAxis /> */}
                 <Tooltip />
                 <Legend />
-                <Line type="monotone" dataKey="sessionLength" stroke="#8884d8" strokeWidth={2} activeDot={{ r: 8 }} />
+                <Line type="monotone" dataKey="sessionLength" stroke="#FFBDBD" strokeWidth={2} activeDot={{ r: 8 }} />
                 {/* <Line type="monotone" dataKey="uv" stroke="#82ca9d" /> */}
             </LineChart>
         </div>

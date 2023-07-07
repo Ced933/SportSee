@@ -3,46 +3,96 @@
     top: 90px;
     left: 100px;
     width: 90%;
-    border: 1px solid black;
-    height: 80vh;
-    display: flex;
+    // border: 1px solid black;
+    height: 82vh;
 
-    .first-part {
-        border: 1px solid red;
-        width: 80%;
 
-        .barchart-container-full {}
+    .Header-presention {
+        margin-bottom: 10px;
 
-        .chart-split {
-            display: flex;
+        .name-red {
+            color: #FF0000;
         }
     }
 
-    .seconde-part {
-        border: 1px solid green;
-        width: 20%;
+    .all-graphics {
+        display: flex;
+        justify-content: space-between;
+
+        .first-part {
+            // border: 1px solid red;
+            width: 75%;
+
+            .barchart-container-full {}
+
+            .chart-split {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+
+        .seconde-part {
+            // border: 1px solid green;
+            width: 20%;
+        }
     }
 }
 
 // css recharts 
 .div-piechart {
     // border: 1px solid #000;
-    width: 200px;
-    height: 150px;
+    width: 250px;
+    height: 200px;
     background: #FBFBFB;
+    border-radius: 10px;
 
-    .recharts-surface {
-        width: 200px;
-        height: 150px;
+    .recharts-wrapper {
+        width: 250px !important;
+        // border: 1px solid orange;
+        height: 150px !important;
+
+        .recharts-surface {
+            width: 250px;
+            height: 200px;
+        }
     }
 }
 
 .div-radar {
-    width: 200px;
-    height: 150px;
+    width: 250px;
+    height: 200px;
+    background-color: #000;
+    border-radius: 10px;
+
+    .recharts-wrapper {
+        border: 1px solid blue;
+        width: 250px !important;
+        height: 200px !important;
+
+        .recharts-surface {
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+        }
+    }
+}
+
+.div-linechart {
+    // width: 300px;
+    // height: 200px;
+    background: #FF0000;
+    border-radius: 10px;
+    // padding: 15px;
 
     .recharts-surface {
-        width: 200px;
-        height: 150px;
+        // width: 300px;
+        // height: 200px;
     }
+}
+
+.div-barchart {
+    background: #FBFBFB;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
 }

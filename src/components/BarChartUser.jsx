@@ -5,10 +5,10 @@ const BarChartUser = ({ dataUserActivity }) => {
 
     // barchart simplebarchart 
     return (
-        <div>
+        <div className='div-barchart'>
 
             <BarChart
-                width={500}
+                width={900}
                 height={300}
                 data={dataUserActivity}
                 margin={{
@@ -23,8 +23,8 @@ const BarChartUser = ({ dataUserActivity }) => {
                 <YAxis />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="kilogram" fill="#8884d8" />
-                <Bar dataKey="calories" fill="#82ca9d" />
+                <Bar dataKey="kilogram" fill="#282D30" />
+                <Bar dataKey="calories" fill="#E60000" />
             </BarChart>
 
         </div>

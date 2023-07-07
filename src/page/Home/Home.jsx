@@ -45,24 +45,31 @@ const Home = () => {
         <div>
             <Navigation />
             <div className='home'>
-                <div className='first-part'>
-                    <div className='barchart-container-full'>
-
-                        {
-                            userIdPersona === data.USER_MAIN_DATA[0].id && <h2>Bonjour {data.USER_MAIN_DATA[0].userInfos.firstName} {data.USER_MAIN_DATA[0].userInfos.lastName}</h2>
-                        }
-                        <BarChartUser dataUserActivity={data.USER_ACTIVITY[0].sessions} />
-                    </div>
-                    <div className='chart-split'>
-                        <LineChartUser dataAverageSession={data.USER_AVERAGE_SESSIONS[0].sessions} />
-                        <RadarChartUser dataPerformance={data.USER_PERFORMANCE[0].data} />
-                        <PieChartUser datan={datan} dataScore={data.USER_MAIN_DATA[0].todayScore} />
-
-                    </div>
+                <div className='Header-presention'>
+                    {
+                        userIdPersona === data.USER_MAIN_DATA[0].id && <h2>Bonjour <span className='name-red'> {data.USER_MAIN_DATA[0].userInfos.firstName} {data.USER_MAIN_DATA[0].userInfos.lastName}</span></h2>
+                    }
+                    <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
                 </div>
-                <div className='seconde-part'>
-                    <Indice dataScore={data.USER_MAIN_DATA[0].keyData} />
+                <div className='all-graphics'>
+
+                    <div className='first-part'>
+                        <div className='barchart-container-full'>
+                            <BarChartUser dataUserActivity={data.USER_ACTIVITY[0].sessions} />
+                        </div>
+                        <div className='chart-split'>
+                            <LineChartUser dataAverageSession={data.USER_AVERAGE_SESSIONS[0].sessions} />
+                            <RadarChartUser dataPerformance={data.USER_PERFORMANCE[0].data} />
+                            <PieChartUser datan={datan} dataScore={data.USER_MAIN_DATA[0].todayScore} />
+
+                        </div>
+                    </div>
+                    <div className='seconde-part'>
+                        <Indice dataScore={data.USER_MAIN_DATA[0].keyData} />
+                    </div>
+
                 </div>
+
 
             </div>
         </div>

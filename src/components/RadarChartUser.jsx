@@ -15,7 +15,7 @@ const RadarChartUser = ({ dataPerformance }) => {
                 <PolarGrid />
                 <PolarAngleAxis dataKey="kind" />
                 <PolarRadiusAxis />
-                <Radar name="Mike" dataKey="value" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+                <Radar name="Mike" dataKey="value" stroke="#fff" fill="#FF0000" fillOpacity={0.6} />
             </RadarChart>
         </div>
 
