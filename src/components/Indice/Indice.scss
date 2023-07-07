@@ -1,0 +1,37 @@
+.indice-describe-box {
+    background: #FBFBFB;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    margin-bottom: 15px;
+
+    .indice-square {
+        background-color: #FBEAEA;
+        padding: 20px;
+        border-radius: 5px;
+
+    }
+
+    .describe-indice {
+        .number-indice {
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+}
+
+.indice-square-blue {
+    background-color: #E9F4FB;
+    padding: 20px;
+    border-radius: 5px;
+
+}
+
+.indice-square-yellow {
+    background-color: #FBF6E5;
+    padding: 20px;
+    border-radius: 5px;
+
+}

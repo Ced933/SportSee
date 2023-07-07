@@ -1,0 +1,48 @@
+.home {
+    position: absolute;
+    top: 90px;
+    left: 100px;
+    width: 90%;
+    border: 1px solid black;
+    height: 80vh;
+    display: flex;
+
+    .first-part {
+        border: 1px solid red;
+        width: 80%;
+
+        .barchart-container-full {}
+
+        .chart-split {
+            display: flex;
+        }
+    }
+
+    .seconde-part {
+        border: 1px solid green;
+        width: 20%;
+    }
+}
+
+// css recharts 
+.div-piechart {
+    // border: 1px solid #000;
+    width: 200px;
+    height: 150px;
+    background: #FBFBFB;
+
+    .recharts-surface {
+        width: 200px;
+        height: 150px;
+    }
+}
+
+.div-radar {
+    width: 200px;
+    height: 150px;
+
+    .recharts-surface {
+        width: 200px;
+        height: 150px;
+    }
+}

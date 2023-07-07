@@ -1,0 +1,41 @@
+.nav {
+
+    height: 91vh;
+    position: relative;
+
+    .container-nav {
+
+        background: black;
+
+        .nav-box {
+            width: 95%;
+            margin: 0 auto;
+
+            .ul-nav {
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .li-nav {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .colonne-nav {
+        background: black;
+        display: inline-block;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80px;
+
+        .ul-colonne {
+            list-style: none;
+        }
+    }
+}
