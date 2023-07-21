@@ -5,7 +5,6 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 //     static demoUrl = 'https://codesandbox.io/s/simple-line-chart-kec3v';
 
 const LineChartUser = ({ dataAverageSession }) => {
-    console.log(dataAverageSession);
     return (
         <div className='div-linechart'>
             <LineChart
@@ -20,7 +19,7 @@ const LineChartUser = ({ dataAverageSession }) => {
                 }}
             >
                 {/* <CartesianGrid strokeDasharray="3 3" /> */}
-                {/* <XAxis dataKey="day" /> */}
+                <XAxis dataKey="day" />
                 {/* <YAxis /> */}
                 <Tooltip />
                 <Legend />

@@ -23,7 +23,7 @@
             // border: 1px solid red;
             width: 75%;
 
-            .barchart-container-full {}
+            // .barchart-container-full {}
 
             .chart-split {
                 display: flex;
@@ -40,7 +40,6 @@
 
 // css recharts 
 .div-piechart {
-    // border: 1px solid #000;
     width: 250px;
     height: 200px;
     background: #FBFBFB;
@@ -48,7 +47,6 @@
 
     .recharts-wrapper {
         width: 250px !important;
-        // border: 1px solid orange;
         height: 150px !important;
 
         .recharts-surface {
@@ -65,7 +63,6 @@
     border-radius: 10px;
 
     .recharts-wrapper {
-        border: 1px solid blue;
         width: 250px !important;
         height: 200px !important;
 
@@ -78,16 +75,8 @@
 }
 
 .div-linechart {
-    // width: 300px;
-    // height: 200px;
     background: #FF0000;
     border-radius: 10px;
-    // padding: 15px;
-
-    .recharts-surface {
-        // width: 300px;
-        // height: 200px;
-    }
 }
 
 .div-barchart {
