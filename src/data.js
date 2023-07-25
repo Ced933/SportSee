@@ -248,9 +248,16 @@ const USER_PERFORMANCE = [
 
 
 
-export default {
+const allData = {
     USER_MAIN_DATA,
     USER_ACTIVITY,
     USER_AVERAGE_SESSIONS,
     USER_PERFORMANCE
 }
+// export default {
+//     USER_MAIN_DATA,
+//     USER_ACTIVITY,
+//     USER_AVERAGE_SESSIONS,
+//     USER_PERFORMANCE
+// }
+export default allData;

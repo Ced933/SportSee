@@ -1,12 +1,9 @@
 import React from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 
 const BarChartUser = ({ dataUserActivity }) => {
-
-    // barchart simplebarchart 
     return (
         <div className='div-barchart'>
-
             <BarChart
                 width={900}
                 height={300}
@@ -26,7 +23,6 @@ const BarChartUser = ({ dataUserActivity }) => {
                 <Bar dataKey="kilogram" fill="#282D30" />
                 <Bar dataKey="calories" fill="#E60000" />
             </BarChart>
-
         </div>
     );
 };

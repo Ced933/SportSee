@@ -1,137 +1,81 @@
 import React, { useEffect, useState } from 'react';
-import Navigation from '../../components/Navigation/Navigation';
+import { useParams } from 'react-router-dom';
+// Scss 
 import './Home.scss';
+// Data json 
 import data from "../../data";
-
+// Rechart 
 import BarChartUser from '../../components/BarChartUser';
 import LineChartUser from '../../components/LineChartUser';
 import RadarChartUser from '../../components/RadarChartUser';
 import PieChartUser from '../../components/PieChartUser';
+// Components 
 import Indice from '../../components/Indice/Indice';
-import { useParams } from 'react-router-dom';
-import axios from 'axios';
 import NameUser from '../../components/NameUser/NameUser';
-import { USER_MAIN_DATA } from '../../data';
-
-// import { fetchData } from '../../Services/Services';
-
+// Services 
+import { fetchData, fetchDataActivity, fetchDataAverage, fetchDataPerfomance } from '../../Services/Services';
 
 const Home = () => {
 
-
     const { id } = useParams();
-
     const [userDataInfo, setUserDataInfo] = useState([]);
     const [userActivity, setUserActivity] = useState([]);
     const [userAverageSession, setUserAverageSession] = useState([]);
     const [userPerformance, setUserPerformance] = useState([]);
-    console.log(id)
+
     useEffect(() => {
-        const fetchData = async () => {
-
-            const result = await fetch(`http://localhost:3000/user/${id}`);
-            const jsonResult = await result.json();
-            setUserDataInfo(jsonResult.data);
-
-
+        if (process.env.REACT_APP_MOCK === 'true') {
+            console.log(process.env.REACT_APP_MOCK)
+            // Json
+            setUserDataInfo(data.USER_MAIN_DATA.find(user => id == user.id))
+            setUserActivity(data.USER_ACTIVITY.find(user => id == user.userId));
+            setUserAverageSession(data.USER_AVERAGE_SESSIONS.find(user => id == user.userId));
+            setUserPerformance(data.USER_PERFORMANCE.find(user => id == user.userId));
         }
-        fetchData();
-        // .then((res) => setUserDataInfo(res.data))
+        else {
+            // Api 
+            const loadDataUserInfo = async () => {
+                setUserDataInfo(await fetchData(id));
+            }
+            loadDataUserInfo();
 
-        const fetchDataAverage = async () => {
-            console.log(2)
-            const result = await fetch(`http://localhost:3000/user/${id}/average-sessions`);
-            const jsonResult = await result.json();
-            setUserAverageSession(jsonResult.data);
+            const loadDataAverage = async () => {
+                setUserAverageSession(await fetchDataAverage(id));
+            }
+            loadDataAverage();
 
+            const loadDataPerformence = async () => {
+                setUserPerformance(await fetchDataPerfomance(id));
+            }
+            loadDataPerformence();
 
+            const loadDataAcitivty = async () => {
+                setUserActivity(await fetchDataActivity(id));
+            }
+            loadDataAcitivty();
         }
-        fetchDataAverage();
-
-        const fetchDataPerformence = async () => {
-            console.log(3)
-            const result = await fetch(`http://localhost:3000/user/${id}/performance`);
-            const jsonResult = await result.json();
-            setUserPerformance(jsonResult.data);
-
-
-        }
-        fetchDataPerformence();
-
-        const fetchDataAcitivty = async () => {
-            console.log(4)
-            const result = await fetch(`http://localhost:3000/user/${id}/activity`);
-            const jsonResult = await result.json();
-            setUserActivity(jsonResult.data);
-
-        }
-        fetchDataAcitivty();
-
-    }, [])
-
-    // const getData = () => {
-    //     userDataInfo = {
-    //         USER_MAIN_DATA: data.USER_MAIN_DATA.find(user => id == user.id)
-
-    //     }
-    //     return getData
-    //     console.log(USER_MAIN_DATA);
-    // }
-    // getData();
-
-    // const userDataInfo = data.USER_MAIN_DATA.find(user => id == user.id)
-    // const userActivity = data.USER_ACTIVITY.find(user => id == user.userId);
-    // const userAverageSession = data.USER_AVERAGE_SESSIONS.find(user => id == user.userId);
-    // const userPerformance = data.USER_PERFORMANCE.find(user => id == user.userId);
-
-    // console.log(userDataInfo);
-    // console.log(userActivity);
-    // console.log(userAverageSession);
-    // console.log(userPerformance);
+    }, []);
 
     return (
         <div>
 
             <div className='home'>
-                {/* data Back-End */}
-                {/* <NameUser dataName={userDataInfo} /> */}
-                {/* data json  */}
                 <NameUser dataName={userDataInfo} />
                 <div className='all-graphics'>
-
                     <div className='first-part'>
                         <div className='barchart-container-full'>
-                            {/* data Back-End */}
                             <BarChartUser dataUserActivity={userActivity.sessions} />
-                            {/* data json  */}
-                            {/* <BarChartUser dataUserActivity={userActivity.sessions} /> */}
                         </div>
                         <div className='chart-split'>
-                            {/* data Back-End */}
-                            {/* <LineChartUser dataAverageSession={userAverageSession.sessions} /> */}
-                            {/* data json  */}
                             <LineChartUser dataAverageSession={userAverageSession.sessions} />
-
-                            {/* data Back-End */}
-                            {/* <RadarChartUser dataPerformance={userPerformance.data} /> */}
-                            {/* data json  */}
                             <RadarChartUser dataPerformance={userPerformance.data} />
-
-                            {/* data Back-End */}
-                            {/* <PieChartUser dataScore={userDataInfo.todayScore} /> */}
-                            {/* data json  */}
                             <PieChartUser dataScore={userDataInfo.todayScore} />
-                            {/* pie ne marche pas  */}
-
                         </div>
                     </div>
                     <div className='seconde-part'>
                         <Indice dataScore={userDataInfo.keyData} />
                     </div>
-
                 </div>
-
-
             </div>
         </div>
     );

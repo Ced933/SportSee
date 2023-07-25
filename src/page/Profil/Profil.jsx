@@ -1,15 +1,9 @@
-import React, { useEffect } from 'react';
-import Navigation from '../../components/Navigation/Navigation';
+import React from 'react';
 import './Profil.scss';
 import { Link } from 'react-router-dom';
 import dataUserInfo from '../../data';
 
-
-
 const Profil = () => {
-
-
-    console.log(dataUserInfo.USER_MAIN_DATA)
     const dataUser = dataUserInfo.USER_MAIN_DATA;
     return (
         <div >

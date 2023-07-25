@@ -1,7 +1,6 @@
 import React from 'react';
 import './Indice.scss';
 const Indice = ({ dataScore }) => {
-    console.log(dataScore);
     return (
         dataScore ?
             <div className='indice-box'>
@@ -15,7 +14,6 @@ const Indice = ({ dataScore }) => {
                     </div>
                 </div>
 
-
                 <div className='indice-describe-box'>
                     <div className='indice-square-blue'>
                         <img src="../chicken.svg" alt="chicken-icon" />
@@ -25,8 +23,6 @@ const Indice = ({ dataScore }) => {
                         <p>Proteines</p>
                     </div>
                 </div>
-
-
 
                 <div className='indice-describe-box'>
                     <div className='indice-square-yellow'>
@@ -38,8 +34,6 @@ const Indice = ({ dataScore }) => {
                     </div>
                 </div>
 
-
-
                 <div className='indice-describe-box'>
                     <div className='indice-square'>
                         <img src="../cheeseburger.svg" alt="cheeseburger-icon" />
@@ -49,7 +43,6 @@ const Indice = ({ dataScore }) => {
                         <p>Lipides</p>
                     </div>
                 </div>
-
             </div>
             : <div>erreur</div>
     );

@@ -1,11 +1,9 @@
 import React from 'react';
-
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from 'recharts';
 
 const RadarChartUser = ({ dataPerformance }) => {
     return (
         <div className='div-radar'>
-
             <RadarChart cx={300}
                 cy={250}
                 outerRadius={150}
@@ -17,7 +15,6 @@ const RadarChartUser = ({ dataPerformance }) => {
                 <Radar name="Mike" dataKey="value" stroke="#fff" fill="#FF0000" fillOpacity={0.6} />
             </RadarChart>
         </div>
-
     );
 };
 

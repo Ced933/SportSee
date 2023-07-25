@@ -1,7 +1,6 @@
 import React from 'react';
 import './NameUser.scss';
 const NameUser = ({ dataName }) => {
-    console.log(dataName);
     return (
         dataName && dataName.userInfos ?
             <div className='Header-presention'>
