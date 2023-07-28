@@ -34,6 +34,7 @@ const Home = () => {
         }
         else {
             // Api 
+            console.log(process.env.REACT_APP_MOCK)
             const loadDataUserInfo = async () => {
                 setUserDataInfo(await fetchData(id));
             }
