@@ -1,10 +1,15 @@
+* {
+    // border: 1px solid #20253A;
+    box-sizing: border-box;
+}
+
 .home {
     position: absolute;
     top: 90px;
     left: 100px;
-    width: 90%;
+    width: 924px;
     // border: 1px solid black;
-    height: 82vh;
+    // height: 82vh;
 
 
     .Header-presention {
@@ -18,12 +23,13 @@
     .all-graphics {
         display: flex;
         justify-content: space-between;
+        // width: 80%;
+        // height: 80%;
+
 
         .first-part {
-            // border: 1px solid red;
-            width: 75%;
-
-            // .barchart-container-full {}
+            // width: 55%;
+            height: 80%;
 
             .chart-split {
                 display: flex;
@@ -33,43 +39,65 @@
 
         .seconde-part {
             // border: 1px solid green;
-            width: 20%;
+            // width: 30%;
         }
     }
 }
 
 // css recharts 
 .div-piechart {
-    width: 250px;
+    position: relative;
+    width: 200px;
     height: 200px;
     background: #FBFBFB;
     border-radius: 10px;
 
+    .p-piechart {
+        position: absolute;
+        color: #20253A;
+        padding: 10px;
+    }
+
+    .div-score-chart {
+        position: absolute;
+        top: 40%;
+        left: 43%;
+        z-index: 12;
+
+        p {
+            color: #74798C;
+            font-size: 11px;
+        }
+    }
+
     .recharts-wrapper {
-        width: 250px !important;
+        width: 200px !important;
         height: 150px !important;
 
         .recharts-surface {
-            width: 250px;
+            width: 200px;
             height: 200px;
         }
     }
 }
 
 .div-radar {
-    width: 250px;
+    width: 223px;
     height: 200px;
     background-color: #000;
     border-radius: 10px;
 
     .recharts-wrapper {
-        width: 250px !important;
+        width: 240px !important;
         height: 200px !important;
+        margin: 0 auto;
 
         .recharts-surface {
-            margin: 0 auto;
-            width: 200px;
+
+            width: 250px;
             height: 200px;
+            transform: scale(1.1);
+            transform: translate(-35px, -5px);
         }
     }
 }
@@ -84,4 +112,9 @@
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
+}
+
+.p-linechart {
+    color: #FF8080;
+    padding: 10px 10px 0 10px;
 }

@@ -6,7 +6,11 @@ const PieChartUser = ({ dataScore }) => {
     return (
         dataScore && dataScore[0].score ?
             <div className='div-piechart'>
-
+                <p className='p-piechart'>Score</p>
+                <div className='div-score-chart'>
+                    <h4>{dataScore[0].score}%</h4>
+                    <p>de votre <br /> objectif</p>
+                </div>
                 <PieChart width={400} height={400}>
                     <Pie
                         data={dataScore}

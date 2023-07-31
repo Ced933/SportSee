@@ -4,9 +4,10 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'rec
 const BarChartUser = ({ dataUserActivity }) => {
     return (
         <div className='div-barchart'>
+            <p>Activité quotidienne</p>
             <BarChart
-                width={900}
-                height={300}
+                width={650}
+                height={200}
                 data={dataUserActivity}
                 margin={{
                     top: 5,
@@ -14,14 +15,15 @@ const BarChartUser = ({ dataUserActivity }) => {
                     left: 20,
                     bottom: 5,
                 }}
+
             >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
+                <CartesianGrid strokeDasharray="3 3" vertical={true} />
+                <XAxis tickLine={false} />
+                <YAxis orientation="right" tickLine={false} />
                 <Tooltip />
                 <Legend />
-                <Bar dataKey="kilogram" fill="#282D30" />
-                <Bar dataKey="calories" fill="#E60000" />
+                <Bar radius={[20, 20, 0, 0]} maxBarSize={10} dataKey="kilogram" fill="#282D30" />
+                <Bar radius={[20, 20, 0, 0]} maxBarSize={10} dataKey="calories" fill="#E60000" />
             </BarChart>
         </div>
     );

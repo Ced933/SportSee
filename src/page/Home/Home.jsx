@@ -55,7 +55,7 @@ const Home = () => {
             }
             loadDataAcitivty();
         }
-    }, []);
+    }, [id]);
 
     return (
         <div>

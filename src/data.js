@@ -121,6 +121,7 @@ const USER_AVERAGE_SESSIONS = [
         sessions: [
             {
                 day: 1,
+                week: 'L',
                 sessionLength: 30
             },
             {
