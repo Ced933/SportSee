@@ -17,14 +17,9 @@ const BarChartUser = ({ dataUserActivity }) => {
             setWidthBarr(650)
         }
         if (screenWidth > 1124 && screenWidth < 1224) {
-            // window.addEventListener("resize", setX(700));
-            // return () => window.removeEventListener("resize", setX);
             setWidthBarr(700)
-
         }
         if (screenWidth > 1224 && screenWidth < 1324) {
-            // window.addEventListener("resize", );
-            // return () => window.removeEventListener("resize", setX(700));
             setWidthBarr(750)
         }
         if (screenWidth > 1324 && screenWidth < 1424) {
@@ -37,11 +32,8 @@ const BarChartUser = ({ dataUserActivity }) => {
         window.addEventListener("resize", funcScreenWidth);
         return () => window.removeEventListener("resize", funcScreenWidth);
 
-
     }, [funcScreenWidth, setWidthBarr])
 
-
-    console.log(screenWidth);
     return (
         <div className='div-barchart'>
             <p>Activité quotidienne</p>
