@@ -8,7 +8,12 @@
     top: 90px;
     left: 100px;
     width: 924px;
-    // border: 1px solid black;
+    border: 1px solid black;
+
+    @media only screen and (min-width: 1024px) {
+        width: 90%;
+    }
+
     // height: 82vh;
 
 
@@ -23,13 +28,22 @@
     .all-graphics {
         display: flex;
         justify-content: space-between;
+
         // width: 80%;
         // height: 80%;
+        border: 1px solid #000;
 
+        @media only screen and (min-width: 1024px) {
+            width: 100%;
+        }
 
         .first-part {
             // width: 55%;
             height: 80%;
+
+            @media only screen and (min-width: 1024px) {
+                width: 70%;
+            }
 
             .chart-split {
                 display: flex;
@@ -38,8 +52,9 @@
         }
 
         .seconde-part {
-            // border: 1px solid green;
-            // width: 30%;
+            @media only screen and (min-width: 1024px) {
+                width: 25%;
+            }
         }
     }
 }
