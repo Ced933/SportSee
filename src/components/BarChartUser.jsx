@@ -13,18 +13,21 @@ const BarChartUser = ({ dataUserActivity }) => {
     console.log(screenWidth)
     useEffect(() => {
         // si la taile de l'ecran est superieur à
-        if (screenWidth > 1124) {
+        if (screenWidth < 1124) {
+            setWidthBarr(650)
+        }
+        if (screenWidth > 1124 && screenWidth < 1224) {
             // window.addEventListener("resize", setX(700));
             // return () => window.removeEventListener("resize", setX);
             setWidthBarr(700)
 
         }
-        if (screenWidth > 1224) {
+        if (screenWidth > 1224 && screenWidth < 1324) {
             // window.addEventListener("resize", );
             // return () => window.removeEventListener("resize", setX(700));
             setWidthBarr(750)
         }
-        if (screenWidth > 1324) {
+        if (screenWidth > 1324 && screenWidth < 1424) {
             setWidthBarr(800)
         }
         if (screenWidth > 1424) {
